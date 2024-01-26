@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'JCI Bangladesh Foundation',
+    title: 'BAT Comms Day 2024',
     htmlAttrs: {
       lang: 'en',
     },

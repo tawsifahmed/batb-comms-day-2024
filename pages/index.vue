@@ -1037,8 +1037,6 @@ export default {
       .getElementById('tap')
       .addEventListener('contextmenu', (e) => e.preventDefault())
     document.getElementById('tap').addEventListener('touchstart', function () {
-      
-
       that.touched = true
 
       that.timeout = setTimeout(() => {
@@ -1060,7 +1058,7 @@ export default {
         .collection('counts')
         .doc('count')
         .update({
-          count: firebase.firestore.FieldValue.increment(1)
+          count: firebase.firestore.FieldValue.increment(1),
         })
         .then(() => {
           this.submitted = true
@@ -1076,11 +1074,11 @@ export default {
 <style>
 #home {
   @apply text-white;
-  /* background-image: url(~assets/mobile-demo.png);
+  background-image: url(~assets/BAT-COMS-DAY-02.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; */
-  background: #221c52;
+  background-position: center center;
+  /* background: #221c52; */
 }
 
 #circle {

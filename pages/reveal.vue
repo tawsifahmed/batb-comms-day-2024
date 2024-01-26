@@ -1,24 +1,24 @@
 <template>
   <main class="h-screen overflow-hidden bg-black">
-    <div class="grid grid-cols-16" v-if="curr < 144">
+    <div class="grid grid-cols-16">
       <Flipper
         v-for="(n, i) in 144"
         :key="i"
-        :front="`/foreground/photo-${n}.png`"
-        :back="`/background/photo-${n}.png`"
+        :front="`/foreground/photo-${n}.jpg`"
+        :back="`/background/photo-${n}.jpg`"
         :width="width"
         :height="height"
         :active="arr[i] < curr"
       />
     </div>
 
-    <video
+    <!-- <video
       src="/bg-video.mp4"
       autoplay
       muted
       class="w-full h-full"
       v-else
-    ></video>
+    ></video> -->
   </main>
 </template>
 
@@ -51,7 +51,7 @@ export default {
     this.height = window.innerHeight / 9
 
     setInterval(() => {
-      this.getCounts()  
+      this.getCounts()
     }, 200)
   },
   methods: {
