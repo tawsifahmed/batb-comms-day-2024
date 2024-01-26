@@ -1,6 +1,6 @@
 <template>
   <main class="h-screen overflow-hidden bg-black">
-    <div class="grid grid-cols-16">
+    <div v-if="curr < 144" class="grid grid-cols-16">
       <Flipper
         v-for="(n, i) in 144"
         :key="i"
@@ -19,6 +19,7 @@
       class="w-full h-full"
       v-else
     ></video> -->
+    <img v-else class="w-full h-full object-center object-fill aspect-auto" src="../assets/V1-1408x640_Countdown.jpg" alt="">
   </main>
 </template>
 
