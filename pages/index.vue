@@ -1,31 +1,17 @@
 <template>
-  <main class="flex flex-col justify-between w-full h-screen p-6" id="home">
-    <div class="flex justify-end">
-      <!-- <img
-        src="~assets/robi-logo.png"
-        alt=""
-        style="width: 80px; height: auto"
-      /> -->
-    </div>
+  <main
+    class="flex flex-col justify-center items-center w-full h-screen p-6"
+    id="home"
+  >
+    <div class="flex flex-col justify-center items-center pt-20 select-none">
+      <div class="w-full text-center" v-if="!submitted">
+        <h1 class="mb-3 text-5xl">Press &amp; Hold to Unveil</h1>
+      </div>
 
-    <!-- <div class="w-full" v-if="!submitted">
-      <p class="mb-1 text-xl font-bold text-center text-white">Your ID</p>
-      <input
-        type="text"
-        class="w-full p-3 text-black border border-black rounded-md"
-        v-model="employee_id"
-      />
-    </div> -->
+      <div class="w-full text-center" v-else>
+        <h1 class="text-5xl">Thank you for participating.</h1>
+      </div>
 
-    <div class="w-full text-center" v-if="!submitted">
-      <h1 class="mb-3 text-5xl">Press &amp; Hold to Unveil</h1>
-      <!-- <p class="text-2xl">The New Age of Business</p> -->
-    </div>
-    <div class="w-full text-center" v-else>
-      <h1 class="text-5xl">Thank you for participating.</h1>
-    </div>
-
-    <div class="flex justify-center pb-16 select-none">
       <div
         id="tap"
         style="width: 220px; height: 220px"
@@ -1074,7 +1060,7 @@ export default {
 <style>
 #home {
   @apply text-white;
-  background-image: url(~assets/BAT-COMS-DAY-02.jpg);
+  background-image: url(~assets/mobile.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

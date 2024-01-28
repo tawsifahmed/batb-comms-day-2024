@@ -1,25 +1,24 @@
 <template>
   <main class="h-screen overflow-hidden bg-black">
-    <div v-if="curr < 144" class="grid grid-cols-16">
+    <div class="grid grid-cols-16" v-if="curr < 144">
       <Flipper
         v-for="(n, i) in 144"
         :key="i"
-        :front="`/foreground/photo-${n}.jpg`"
-        :back="`/background/photo-${n}.jpg`"
+        :front="`/foreground/photo-${n}.png`"
+        :back="`/background/photo-${n}.png`"
         :width="width"
         :height="height"
         :active="arr[i] < curr"
       />
     </div>
 
-    <!-- <video
+    <video
       src="/bg-video.mp4"
       autoplay
       muted
       class="w-full h-full"
       v-else
-    ></video> -->
-    <img v-else class="w-full h-full object-center object-fill aspect-auto" src="../assets/V1-1408x640_Countdown.jpg" alt="">
+    ></video>
   </main>
 </template>
 
