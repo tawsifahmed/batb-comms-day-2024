@@ -12,13 +12,7 @@
       />
     </div>
 
-    <video
-      src="/bg-video.mp4"
-      autoplay
-      muted
-      class="w-full h-full"
-      v-else
-    ></video>
+    <video src="/countdown.mp4" autoplay class="w-full h-full" v-else></video>
   </main>
 </template>
 
